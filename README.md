@@ -1,4 +1,4 @@
-# Fluent Bit
+# Docker Pull Through Cache
 -------------------------------------------------------------------------------
 
-COMPOSE FILE TO DEPLOY FLUENT BIT
+COMPOSE FILE TO DEPLOY DOCKER PULL THROUGH CACHE
