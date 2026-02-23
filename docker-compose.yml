@@ -1,0 +1,17 @@
+services:
+  registry:
+    image: registry:2
+    container_name: docker-registry-proxy
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - REGISTRY_PROXY_REMOTEURL=https://registry-1.docker.io
+      - REGISTRY_HTTP_ADDR=0.0.0.0:5000
+    volumes:
+      - /srv/registry:/var/lib/registry
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
